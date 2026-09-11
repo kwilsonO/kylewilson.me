@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kyle Wilson</title>
-<meta name="description" content="Kyle Wilson" />
+<title>Kyle Wilson — And Xia Too</title>
+<meta name="description" content="Kyle Wilson — And Xia Too" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet" />
@@ -81,9 +81,24 @@
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+  .title-block {
+    text-align: center;
+  }
+  .subtitle {
+    color: rgba(216, 210, 255, 0.62);
+    font-weight: 300;
+    font-size: clamp(1rem, 3.2vw, 1.7rem);
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
+    margin-top: 1.4rem;
+    text-shadow: 0 0 18px rgba(150, 140, 255, 0.35);
+    opacity: 0;
+    animation: fadein 2.6s ease-out 1.8s forwards;
+  }
   @media (prefers-reduced-motion: reduce) {
     .nebula { animation: none; }
     h1 { animation-duration: 0.1s; }
+    .subtitle { animation-duration: 0.1s; }
   }
 </style>
 </head>
@@ -93,7 +108,10 @@
   <div class="nebula three"></div>
   <canvas id="stars"></canvas>
   <main>
-    <h1>Kyle Wilson</h1>
+    <div class="title-block">
+      <h1>Kyle Wilson</h1>
+      <p class="subtitle">And Xia too</p>
+    </div>
   </main>
 <script>
   const canvas = document.getElementById('stars');
